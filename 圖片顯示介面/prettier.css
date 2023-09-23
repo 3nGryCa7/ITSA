@@ -1,0 +1,75 @@
+body {
+    /* height: calc(100vh - 2rem); */
+    padding: 1rem;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+}
+
+.bar-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 40px; */
+    border-radius: .5rem;
+    gap: 1rem;
+    padding: .5rem;
+    justify-content: center;
+}
+
+
+#side-bar {
+    background-color: rgb(238, 238, 238);
+    height: 95vh;
+    width: 50px;
+}
+
+.btn {
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1rem;
+}
+
+#home {
+    background-image: url("icons/house-door.svg");
+}
+
+#bookmark {
+    background-image: url("icons/bookmark.svg");
+}
+
+#setting {
+    margin-top: auto;
+    background-image: url("icons/gear.svg");
+}
+
+.main {
+    width: auto;
+}
+
+#top-bar {
+    display: flex;
+    background-color: rgb(255, 255, 253);
+    flex-grow: 1;
+    width: 100%;
+    box-shadow: 1px 1px 5px 2px rgba(169, 169, 169, 0.5);
+    height: 40px;
+}
+
+.block {
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 250px;
+    display: flex;
+}

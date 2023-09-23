@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="prettier.css" />
+    <script src="../jquery-3.6.4.min.js"></script>
+    <script>
+      $(() => {
+
+        let notes = [];
+
+        function updateNote() {
+            $("#notes").empty();
+            if (notes.length) {
+                $("#delete-all").show();
+
+                notes.forEach( (note, index) => {
+                    $("<div>", {
+                    class: "note",
+                    text: note
+                    })
+                    .append($("<button>", {
+                        class: "btn-edit",
+                    })
+                    .click(index, editNote))
+                    .append($("<button>", {
+                        class: "btn-del",
+                    })
+                    .click(index, deleteNote))
+                    .appendTo("#notes");
+
+                })
+
+            } else {
+                $("#delete-all").hide();
+            }
+            $("#input").val('');
+        }
+
+        function addNote(event) {
+            event.preventDefault();
+            notes.push($("#input").val());
+            updateNote();
+        }
+
+        function deleteAll() {
+            notes = [];
+            updateNote();
+        }
+
+        function deleteNote(event) {
+            notes.splice(event.data, 1);
+            updateNote();
+        }
+
+        function editNote(event) {
+            $("#edit-input").val(notes[event.data]);
+            $("form").toggle();
+
+            $("#edit-form").one("submit", event.data, (event) => {
+                event.preventDefault();
+                notes[event.data] = $("#edit-input").val();
+                updateNote();
+                $("form").toggle();
+            })
+        }
+
+        $("#delete-all").click(deleteAll);
+        $("#default-form").submit(addNote);
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-line"><h2>待辦事項清單</h2></div>
+      <form class="form-line confirm" id="default-form">
+        <input id="input" placeholder="例如: 買早餐" type="text" />
+        <button type="submit" class="button">送出</button>
+      </form>
+      <form class="form-line confirm" id="edit-form" style="display: none;">
+        <input id="edit-input" type="text" />
+        <button type="submit" class="button">送出</button>
+      </form>
+      <div class="form-line" id="notes"></div>
+      <div class="form-line">
+        <button class="button" id="delete-all" hidden>清除所有項目</button>
+      </div>
+    </div>
+  </body>
+</html>
+
