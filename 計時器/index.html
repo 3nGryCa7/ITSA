@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <link rel="stylesheet" href="prettier.css">
+    <script src="../jquery-3.6.4.min.js"></script>
+    <script src="timer.js"></script>
+</head>
+<body>
+    <div class="timer">
+        <h1>計時器</h1>
+        <div id="time-display">00:00:00</div>
+        <div id="time-settable">
+            <label for="set-time">設定目標日期及時間</label>
+            <input type="datetime-local" id="set-time">
+            <button id="start-stop">開始</button>
+            <button id="reset">重置</button>
+        </div>
+    </div>
+</body>
+</html>
