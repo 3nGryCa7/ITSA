@@ -1,0 +1,53 @@
+body {
+    height: 100vh;
+}
+
+header {
+    height: 3rem;
+    background-color: rgb(78, 75, 75);
+    color: white;
+    letter-spacing: .1rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+main {
+    padding: 1rem;
+    height: 90%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+h2 {
+    margin: 0;
+}
+
+button {
+    padding: .8rem;
+    border: 0;
+    background-color: darkcyan;
+    color: white;
+    letter-spacing: .1rem;
+    border-radius: .3rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(2, 107, 107);
+}
+
+.hidden {
+    display: none;
+}
+
+.right-ans {
+    color: green;
+}
+
+.false-ans {
+    color: red;
+}
