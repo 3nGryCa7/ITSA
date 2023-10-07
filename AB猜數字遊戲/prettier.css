@@ -1,0 +1,46 @@
+body {
+    height: 100vh;
+}
+
+.info {
+    display: flex;
+    gap: .5rem;
+    height: auto;
+    align-items: center;
+}
+
+button {
+    color: white;
+    border: 0;
+    border-radius: .2rem;
+    padding: .5rem .6rem .5rem .6rem;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: .8;
+}
+
+#new-game {
+    background-color: rgb(115, 180, 201);
+}
+
+#ok {
+    background-color: rgb(53, 53, 151);
+}
+
+input {
+    text-align: right;
+}
+
+#show-answer {
+    background-color: rgb(74, 173, 74);
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: .5rem;
+    margin: 1rem 0 1rem 0;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AB猜數字遊戲</title>
+    <link rel="stylesheet" href="prettier.css">
+    <script src="../jquery-3.6.4.min.js"></script>
+    <script src="function.js"></script>
+</head>
+<body>
+    <h2>猜數字</h2>
+
+    <div class="info" id="new-game-line">
+        <button id="new-game">新局</button>
+        <select>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        位數字
+    </div>
+
+    <div class="info">
+        輸入<span id="value">3</span>位數字 
+        <input type="text" id="player-guess" disabled>
+        <button id="ok">OK</button>
+        <p id="disallow"></p>
+    </div>
+
+    <div class="history">
+        <b>猜數字歷程: </b>
+        <textarea rows="10"></textarea>
+    </div>
+
+    <button id="show-answer">顯示答案</button>
+</body>
+</html>
