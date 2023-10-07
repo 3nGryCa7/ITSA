@@ -1,0 +1,29 @@
+body {
+    height: 100vh;
+}
+
+.button {
+    background-color: antiquewhite;
+    display: inline-block;
+    padding: .3rem;
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.button:active{
+    background-color: darksalmon;
+}
+
+.video-button:not(:checked) + .video-page {
+    display: none;
+}
+
+video {
+    display: block;
+    margin: 1rem;
+}
+
+button {
+    display: inline-block;
+    margin: .5rem;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>視訊控制播放系統</title>
+    <link rel="stylesheet" href="prettier.css">
+    <script src="../jquery-3.6.4.min.js"></script>
+    <script src="function.js"></script>
+</head>
+<body>
+    <nav>
+        <label class="button" for="video-1">第一個影片</label>
+        <label class="button" for="video-2">第二個影片</label>
+        <label class="button" for="video-3">第三個影片</label>
+    </nav>
+
+    <main>
+        <input class="video-button" id="video-1" type="radio" name="nav" checked hidden>
+        <div class="video-page">
+            <video type="video/mp4" src="video-1.mp4" class="video"></video>
+            播放進度: <span class="time">0</span><br>
+            <input name="volume" type="range" min="0" max="100" step="1" value="50">
+            當前音量: <span class="volume">50</span><br>
+            <button class="play">播放</button>
+            <button class="stop">暫停</button>
+            當前狀態: <span class="status"></span><br>
+
+            <button class="bigger">放大</button>
+            <button class="smaller">縮小</button>
+            <button class="normal">正常</button>
+        </div>
+
+        <input class="video-button" id="video-2" type="radio" name="nav" hidden>
+        <div class="video-page">
+            <video type="video/mp4" src="video-2.mp4" class="video"></video>
+            播放進度: <span class="time">0</span><br>
+            <input name="volume" type="range" min="0" max="100" step="1" value="50">
+            當前音量: <span class="volume">50</span><br>
+            <button class="play">播放</button>
+            <button class="stop">暫停</button>
+            當前狀態: <span class="status"></span><br>
+
+            <button class="bigger">放大</button>
+            <button class="smaller">縮小</button>
+            <button class="normal">正常</button>
+        </div>
+        
+        <input class="video-button" id="video-3" type="radio" name="nav" hidden>
+        <div class="video-page">
+            <video type="video/mp4" src="video-3.mp4" class="video"></video>
+            播放進度: <span class="time">0</span><br>
+            <input name="volume" type="range" min="0" max="100" step="1" value="50">
+            當前音量: <span class="volume">50</span><br>
+            <button class="play">播放</button>
+            <button class="stop">暫停</button>
+            當前狀態: <span class="status"></span><br>
+
+            <button class="bigger">放大</button>
+            <button class="smaller">縮小</button>
+            <button class="normal">正常</button>
+        </div>
+    </main>
+</body>
+</html>
