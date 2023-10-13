@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>會員資料輸入系統</title>
+    <link rel="stylesheet" href="prettier.css" />
+    <script src="../jquery-3.6.4.min.js"></script>
+  </head>
+  <body>
+    <header>ABC俱樂部會員申請</header>
+    <main>
+      <form>
+
+        <div class="form-line">
+          <label for="name">姓名 : </label>
+          <input id="name" name="name" type="text" />
+        </div>
+
+        <div class="form-line split-space">
+            <div class="split-space">
+                <span>性別 : </span>
+                <input id="gender-male" name="gender" type="radio" />
+                <label for="gender-male">男性</label>
+      
+                <input id="gender-female" name="gender" type="radio" />
+                <label for="gender-female">女性</label>
+      
+                <input id="gender-other" name="gender" type="radio" />
+                <label for="gender-other">其他</label>
+            </div>
+            <div class="split-space">
+                <label for="date">出生年月日 : </label>
+                <input id="date" type="date" name="date" />
+            </div>
+            <div class="split-space">
+                <label for="phone">聯絡電話 : </label>
+                <input id="phone" type="number" name="phone" placeholder="(xx) 1234-5679"/>
+            </div>
+        </div>
+
+        <div class="form-line">
+            <label for="regist-address">戶籍地址</label><br>
+            <input class="full-line" id="regist-address" name="regist-address" type="text" placeholder="請輸入戶籍地址" />
+        </div>
+
+        <div class="form-line">
+            <label for="contact-address">通訊地址 : </label>
+            <input type="checkbox">同戶籍地址
+            <input class="full-line" id="contact-address" name="contact-address" type="text" placeholder="請輸入通訊地址" />
+        </div>
+
+        <div class="form-line">
+            <label for="email">電子郵件帳號 : </label>
+            <input class="full-line" id="email" name="email" type="email" placeholder="請輸入電子郵件帳號" /> 
+        </div>
+
+        <div class="form-line">
+            <label for="email-2">再次電子郵件帳號 : </label>
+            <input class="full-line" id="email-2" name="email" type="email" placeholder="請輸入電子郵件帳號" /> 
+        </div>
+
+        <div class="form-line">
+            <label for="passwd">密碼</label>
+            <input id="passwd" name="passwd" type="password" placeholder="請輸入密碼" />
+            <button type="submit" id="show-pd">
+                <img src="icons/eye.png">
+            </button>
+            <button type="submit" id="hide-pd" hidden>
+                <img src="icons/hidden.png">
+            </button>
+            <span>(請輸入8位以上密碼，包含重複之大小寫字母、符號及數字)</span>
+        </div>
+
+        <div class="form-line">
+            密碼強度 : 
+            <meter value="0"></meter>
+        </div>
+
+        <div class="form-line">
+            <label for="passwd-2">密碼確認 : </label>
+            <input id="passwd-2" type="password" placeholder="再次輸入密碼" name="passwd" />
+            <button type="submit" id="show-pd">
+                <img src="icons/eye.png">
+            </button>
+            <button type="submit" id="hide-pd" hidden>
+                <img src="icons/hidden.png">
+            </button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
