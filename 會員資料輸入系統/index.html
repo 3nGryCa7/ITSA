@@ -6,6 +6,10 @@
     <title>會員資料輸入系統</title>
     <link rel="stylesheet" href="prettier.css" />
     <script src="../jquery-3.6.4.min.js"></script>
+    <script src="functions.js"></script>
+    <script>
+
+    </script>
   </head>
   <body>
     <header>ABC俱樂部會員申請</header>
@@ -46,7 +50,8 @@
 
         <div class="form-line">
             <label for="contact-address">通訊地址 : </label>
-            <input type="checkbox">同戶籍地址
+            <input type="checkbox" id="check-contact-address">
+            <label for="check-contact-address">同戶籍地址</label>
             <input class="full-line" id="contact-address" name="contact-address" type="text" placeholder="請輸入通訊地址" />
         </div>
 
@@ -88,6 +93,8 @@
             </button>
         </div>
       </form>
+
+      <button type="submit" id="submit">確認</button>
     </main>
   </body>
 </html>
