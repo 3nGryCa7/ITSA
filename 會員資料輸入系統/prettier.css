@@ -21,6 +21,7 @@ main {
 .form-line {
     line-height: 2rem;
     padding: .5rem 0 .5rem 0;
+    position: relative;
 }
 
 input {
@@ -56,4 +57,14 @@ img {
     padding: .5rem .7rem .5rem .7rem;
     border-radius: .5rem;
     font-weight: bold;
+}
+
+.warning-input {
+    border-color: red;
+}
+
+.warning-text {
+    position: absolute;
+    color: red; 
+    margin: 0;
 }
