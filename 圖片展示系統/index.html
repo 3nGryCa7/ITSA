@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>team53</title>
+    <link rel="stylesheet" href="prettier.css" />
+    <script src="../jquery-3.6.4.min.js"></script>
+    <script>
+      $(() => {
+        function showAll() {
+          $("#all").addClass("active");
+          $("#nature").removeClass("active");
+          $("#city").removeClass("active");
+
+          $(".img-all").removeClass("hide");
+          $(".img-nature").addClass("hide");
+          $(".img-city").addClass("hide");
+        }
+
+        function showNature() {
+          $("#all").removeClass("active");
+          $("#nature").addClass("active");
+          $("#city").removeClass("active");
+
+          $(".img-all").addClass("hide");
+          $(".img-nature").removeClass("hide");
+          $(".img-city").addClass("hide");
+        }
+
+        function showCity() {
+          $("#all").removeClass("active");
+          $("#nature").removeClass("active");
+          $("#city").addClass("active");
+
+          $(".img-all").addClass("hide");
+          $(".img-nature").addClass("hide");
+          $(".img-city").removeClass("hide");
+        }
+
+        $("#all").click(showAll);
+        $("#nature").click(showNature);
+        $("#city").click(showCity);
+
+        showAll();
+      });
+    </script>
+  </head>
+  <body>
+    <div class="top-bar">
+      <button class="btn" id="all">全部圖片</button>
+      <button class="btn" id="nature">自然風景圖</button>
+      <button class="btn" id="city">城市風景圖</button>
+    </div>
+    <div class="img-block">
+      <div class="imgs">
+        <img
+          src="./image/img01.jpg"
+          alt=""
+          class="img-all"
+        />
+        <img
+          src="./image/img02.jpg"
+          alt=""
+          class="img-all"
+        />
+        <img
+          src="./image/img03.jpg"
+          alt=""
+          class="img-all"
+        />
+        <img
+          src="./image/img04.jpg"
+          alt=""
+          class="img-all"
+        />
+        <img
+          src="./image/img05.jpg"
+          alt=""
+          class="img-all"
+        />
+        <img
+          src="./image/img06.jpg"
+          alt=""
+          class="img-all"
+        />
+        <img
+          src="./image/img07.jpg"
+          alt=""
+          class="img-all"
+        />
+        <img
+          src="./image/img08.jpg"
+          alt=""
+          class="img-all"
+        />
+      </div>
+
+      <div class="imgs">
+        <img
+          src="./image/img01.jpg"
+          alt=""
+          class="img-nature hide"
+        />
+        <img
+          src="./image/img02.jpg"
+          alt=""
+          class="img-nature hide"
+        />
+        <img
+          src="./image/img04.jpg"
+          alt=""
+          class="img-nature hide"
+        />
+        <img
+          src="./image/img06.jpg"
+          alt=""
+          class="img-nature hide"
+        />
+        <img
+          src="./image/img07.jpg"
+          alt=""
+          class="img-nature hide"
+        />
+      </div>
+
+      <div class="imgs">
+        <img
+          src="./image/img03.jpg"
+          alt=""
+          class="img-city hide"
+        />
+        <img
+          src="./image/img05.jpg"
+          alt=""
+          class="img-city hide"
+        />
+        <img
+          src="./image/img08.jpg"
+          alt=""
+          class="img-city hide"
+        />
+      </div>
+    </div>
+  </body>
+</html>

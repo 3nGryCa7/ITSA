@@ -1,0 +1,48 @@
+body {
+    height: 100vh;
+    margin: 3rem 1rem 3rem 1rem;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    border: 0;
+    border-radius: 1rem;
+    background-color: gray;
+    padding: .5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.active {
+    background-color: rgb(99, 195, 182);
+    color: white;
+}
+
+
+.imgs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+}
+
+img {
+    width: 300px;
+    box-shadow: 2.5px 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    box-shadow: none;
+    transform: scale(1.1); 
+}
+
+.hide {
+    display: none;
+}
