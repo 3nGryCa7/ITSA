@@ -66,13 +66,13 @@ button:hover {
 .btn-edit {
     margin-left: auto;
     padding: .5rem;
-    background-image: url('icons/check2-circle.svg');
+    background-image: url('../icons/check2-circle.svg');
     background-color: transparent;
     border: 0;
 }
 
 .btn-del {
-    background-image: url('icons/trash.svg');
+    background-image: url('../icons/trash.svg');
     background-color: transparent;
     padding: .5rem;
     border: 0;

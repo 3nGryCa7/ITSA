@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>待辦事件清單</title>
+    <script src="../jquery-3.6.4.min.js"></script>
+    <script>
+      const notes = JSON.parse(localStorage.getItem("notes")) || [];
+
+      function saveStorage() {
+        localStorage.setItem("notes", JSON.stringify(notes));
+      }
+
+      function updateNotes(notes) {
+        $("#notes").empty();
+
+        notes.forEach((note, index) => {
+          /*
+          Use JQuery but doesn't have "checked"
+          const noteItem = $("<p class='noteItem'></p>");
+          $('<input type="checkbox" class="check">').appendTo(noteItem);
+          $('<span></span>').text(note.text).appendTo(noteItem);
+          $('<button class="delete">刪除</button>').click( function() {
+            notes.splice(index, 1);
+            saveStorage();
+            updateNotes(notes);
+          }).appendTo(noteItem);
+
+          $("#notes").append(noteItem);
+          */
+          const noteItem = document.createElement("p");
+          noteItem.innerHTML = `
+            <p class="noteItem">
+            <input type="checkbox" ${
+              note.done ? "checked" : ""
+            } onchange="toggleCheck(${index})">
+            <span>${note.text}</span>
+            <button id="delete" onclick="deleteNote(${index})">刪除</button>
+            </p>`;
+          document.getElementById("notes").appendChild(noteItem);
+          $("#note").val();
+        });
+      }
+
+      function toggleCheck(index) {
+        console.log("change", index);
+        notes[index].done = !notes[index].done;
+        saveStorage();
+        updateNotes(notes);
+      }
+
+      function deleteNote(index) {
+        // array.findIndex(function) : 找到符合function filter的第一個index
+        // array.splice(start, deleteCount, [addItem...])
+        notes.splice(index, 1);
+        saveStorage();
+        updateNotes(notes);
+      }
+
+      $(() => {
+        $("#add").click(function () {
+          let note = $("#note").val();
+          notes.push({ text: note, done: false });
+          updateNotes(notes);
+          saveStorage();
+        });
+
+        updateNotes(notes);
+      });
+    </script>
+  </head>
+  <body>
+    <input id="note" placeholder="請輸入事件" />
+    <button id="add" type="submit">新增</button>
+
+    <div id="notes"></div>
+  </body>
+</html>
