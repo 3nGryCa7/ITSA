@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    /* flex-wrap: wrap -> 將被擠在同一行多個元素換行 */
+    flex-wrap: wrap;
+    gap: .5rem;
+    padding: 2rem;
+    justify-content: center;
+}
+
+img {
+    width: 250px;
+    height: 150px;
+}
+
+.img-item {
+    position: relative;
+}
+
+p {
+    margin: 0;
+}
+
+.background {
+    position: absolute;
+    background-color: rgba(57, 57, 57, 0.5);
+    transform: scale(0);
+    top: 0;
+    left: 0;
+    transition: transform ease-in-out .3s;
+    height: 100%;
+    width: 100%;
+}
+
+.img-item:hover p {
+    transform: scale(1);
+}
