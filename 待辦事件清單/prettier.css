@@ -6,8 +6,3 @@ body {
 .notes {
     display: flex;
 }
-
-.noteItem {
-    display: flex;
-    flex-direction: column;
-}
